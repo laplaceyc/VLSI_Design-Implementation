@@ -1,5 +1,5 @@
 VLOG	= ncverilog
-SRC		= lab03_header.v lab03_pingpong_t.v lab03_pingpong.v
+SRC	= lab03_header.v lab03_pingpong_t.v lab03_pingpong.v
 PATTERN_COUNT = 1024
 WIDTH = 4
 PERIOD = 8
