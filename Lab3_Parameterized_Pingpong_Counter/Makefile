@@ -11,12 +11,13 @@ FSDB = Majority.fsdb
 PATTERN = pp02_w8_pat.dat
 GOLDEN = pp02_w8_gold.dat
 
-VLOGARG = +access+r +define+PATTERN_COUNT=${PATTERN_COUNT} \
+VLOGARG = +access+r \
+	  +define+PATTERN_COUNT=${PATTERN_COUNT} \
           +define+WIDTH=${WIDTH} \
-		  +define+PERIOD=${PERIOD} \
-		  +define+DELAY=${DELAY} \
-		  +define+DEBUG=${DEBUG} \
-		  +define+UPPER_BOUND=${UPPER_BOUND} \
+	  +define+PERIOD=${PERIOD} \
+	  +define+DELAY=${DELAY} \
+	  +define+DEBUG=${DEBUG} \
+	  +define+UPPER_BOUND=${UPPER_BOUND} \
           +define+LOWER_BOUND=${LOWER_BOUND} \
           +define+FSDB="\"${FSDB}"\" \
           +define+PATTERN="\"${PATTERN}"\" \
