@@ -1,0 +1,36 @@
+#user spec file, version 2004Q2V1
+#Mon Mar 14 23:39:18 CST 2011
+prefix=
+frequency=100
+right_bus_delim=]
+insert_fuse=yes
+ring_width=4
+power_type=rings
+pwr_gnd_rename=VDD:VDD,GND:VSS
+redundancy_bits=1
+pin_space=0.0
+check_instname=on
+vert=met4
+name_case=upper
+rtl_style=mux
+mux=32
+synopsys.libname=sram_8192x8_t13
+tlf.libname=USERLIB
+fusebox_name=FUSE
+vclef-fp.site_def=off
+write_mask=off
+inside_ring_type=GND
+vclef-fp.inst2ring=blockages
+top_layer=met5
+bits=8
+fuse_encoding=encoded
+instname=sram_8192x8_t13
+left_bus_delim=[
+redundancy=off
+horiz=met3
+acroread=acroread
+diodes=on
+drive=6
+cust_comment=
+wp_size=8
+words=8192

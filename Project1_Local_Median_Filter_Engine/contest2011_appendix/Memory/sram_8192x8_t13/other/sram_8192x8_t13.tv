@@ -1,0 +1,102 @@
+//
+//      CONFIDENTIAL AND PROPRIETARY SOFTWARE/DATA OF ARTISAN COMPONENTS, INC.
+//      
+//      Copyright (c) 2011 Artisan Components, Inc.  All Rights Reserved.
+//      
+//      Use of this Software/Data is subject to the terms and conditions of
+//      the applicable license agreement between Artisan Components, Inc. and
+//      Taiwan Semiconductor Manufacturing Company Ltd..  In addition, this Software/Data
+//      is protected by copyright law and international treaties.
+//      
+//      The copyright notice(s) in this Software/Data does not indicate actual
+//      or intended publication of this Software/Data.
+//      name:			SRAM-SP-HS-HC SRAM Generator
+//           			TSMC CL013G Process
+//      version:		2004Q2V1
+//      comment:		
+//      configuration:	 -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux
+//
+//      Tetramax model for Synchronous Single-Port Ram
+//
+//      Instance Name:  sram_8192x8_t13
+//      Words:          8192
+//      Word Width:     8
+//      Pipeline:       No
+//
+//      Creation Date:  2011-03-15 05:39:55Z
+//      Verified With: TetraMax 2002.05
+//
+//      Modeling Assumptions: This model is for use by only TetraMax ATPG tool.
+//      It is not intended to be used by any Verilog Simulator.
+//
+//      Modeling Limitations: These models have limited functionality and x
+//      handling as defined by the TetraMax modelling guidelines. These models are
+//      developed on Verilog syntax but they don't fully represent the 
+//      functionality of the memory models as they are restricted by 
+//      the ATPG tool.  During the read/write  contention the 
+//      memory location is written with correct data but
+//      the outputs are set to "X". During the write/write 
+//      contention the memory location is written with "X" data and
+//      the outputs are set to "X". The tetramax 2001.08 will generate wrong ATPG
+//      vectors for dual port RAM if full sequential ATPG engine is used. We have used
+//      fast sequential ATPG engine for verification of all the memories on
+//      recommendation from Synopsys Tetramax expert. The models have been tested 
+//      by generating the ATPG vectors and simulating them as well as running functional 
+//      vectors through tetramax logical simulation engine.
+//
+//      Known Bugs: None.
+//
+//      Known Work Arounds: N/A
+//
+`timescale 1 ns/1 ps
+module data_switch (q, s1, s2, d2, d3, clk);
+  output q;
+  input s1,s2,d2,d3,clk;
+  _MUX m2 (s2, d3, d2, n2);
+  _MUX m1 (s1, n2, q, n1);
+  _DFF r1 (1'b0, 1'b0, clk, n1, q);
+endmodule
+`celldefine
+`define read_write new
+
+module sram_8192x8_t13 (
+   Q,
+   CLK,
+   CEN,
+   WEN,
+   A,
+   D
+);
+   parameter		   BITS = 8;
+   parameter		   word_depth = 8192;
+   parameter		   addr_width = 13;
+//PORT_NAMES
+   output [7:0] Q;
+   reg [7:0] Q;
+   input CLK;
+   input CEN;
+   input WEN;
+   input [12:0] A;
+   input [7:0] D;
+   reg [BITS-1:0] mem [word_depth-1:0];
+   reg [7:0] iQ;
+
+event write_event;
+supply1 vdd;
+
+   not (NOT_CEN, CEN);
+   not (NOT_WEN, WEN);
+   and (RW_BOTH,NOT_WEN, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH ) mem[A]=D;
+   always @ ( vdd or A or write_event ) iQ=mem[A];
+   data_switch (.q(Q[0]), .s1(CEN), .s2(RW_BOTH), .d2(D[0]), .d3(iQ[0]), .clk(CLK));
+   data_switch (.q(Q[1]), .s1(CEN), .s2(RW_BOTH), .d2(D[1]), .d3(iQ[1]), .clk(CLK));
+   data_switch (.q(Q[2]), .s1(CEN), .s2(RW_BOTH), .d2(D[2]), .d3(iQ[2]), .clk(CLK));
+   data_switch (.q(Q[3]), .s1(CEN), .s2(RW_BOTH), .d2(D[3]), .d3(iQ[3]), .clk(CLK));
+   data_switch (.q(Q[4]), .s1(CEN), .s2(RW_BOTH), .d2(D[4]), .d3(iQ[4]), .clk(CLK));
+   data_switch (.q(Q[5]), .s1(CEN), .s2(RW_BOTH), .d2(D[5]), .d3(iQ[5]), .clk(CLK));
+   data_switch (.q(Q[6]), .s1(CEN), .s2(RW_BOTH), .d2(D[6]), .d3(iQ[6]), .clk(CLK));
+   data_switch (.q(Q[7]), .s1(CEN), .s2(RW_BOTH), .d2(D[7]), .d3(iQ[7]), .clk(CLK));
+endmodule
+`endcelldefine
+`undef read_write

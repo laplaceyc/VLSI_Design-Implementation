@@ -1,0 +1,62 @@
+9:38:32 PM - Artisan Components, Inc.
+9:38:32 PM - SunOS sf01a 5.10 Generic_139555-08 sun4u sparc SUNW,Sun-Fire
+9:38:32 PM - Version 2004Q2V1
+9:38:32 PM - GUI version 4.58.13
+9:38:32 PM - 
+9:38:32 PM - CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARTISAN COMPONENTS, INC.
+9:38:32 PM - 
+9:38:32 PM - Copyright (c) 2011 Artisan Components, Inc.  All Rights Reserved.
+9:38:32 PM - 
+9:38:32 PM - Use of this Software is subject to the terms and conditions of the
+9:38:32 PM - applicable license agreement between Artisan Components, Inc. and
+9:38:32 PM - Taiwan Semiconductor Manufacturing Company Ltd.  In addition, this Software
+9:38:32 PM - is protected by copyright law and international treaties.
+9:38:32 PM - 
+9:38:32 PM - The copyright notice(s) in this Software does not indicate actual or
+9:38:32 PM - intended publication of this Software.
+9:38:32 PM - 
+9:38:32 PM - SRAM-SP-HS-HC SRAM Generator, TSMC CL013G Process
+9:38:32 PM - 
+9:38:32 PM - Log file is ACI.log
+9:38:32 PM - 
+9:38:54 PM - ASCII Datatable updated
+9:38:57 PM - 
+9:38:57 PM - *** Error *** ascii: -words option out of range, 8192, 9:38:57 PM - must be within 256 and 4096
+9:38:59 PM - ASCII Datatable updated
+9:39:18 PM - Created spec file: sram_8192x8_t13.spec
+9:39:29 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh postscript -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux
+9:39:29 PM - PostScript Datasheet generator succeeded, created:
+9:39:29 PM -    sram_8192x8_t13.ps
+9:39:30 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh ascii -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux
+9:39:30 PM - ASCII Datatable generator succeeded, created:
+9:39:30 PM -    sram_8192x8_t13.dat
+9:39:30 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh verilog -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux
+9:39:31 PM - Verilog Model generator succeeded, created:
+9:39:31 PM -    sram_8192x8_t13.v
+9:39:31 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh vhdl -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux
+9:39:31 PM - VHDL Model generator succeeded, created:
+9:39:31 PM -    sram_8192x8_t13.vhd
+9:39:32 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh synopsys -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux -libname "sram_8192x8_t13"
+9:39:34 PM - Synopsys Model generator succeeded, created:
+9:39:34 PM -    sram_8192x8_t13_fast_syn.lib
+9:39:34 PM -    sram_8192x8_t13_typical_syn.lib
+9:39:34 PM -    sram_8192x8_t13_slow_syn.lib
+9:39:35 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh primetime -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux
+9:39:38 PM - PrimeTime Model generator succeeded, created:
+9:39:38 PM -    sram_8192x8_t13_fast.data
+9:39:38 PM -    sram_8192x8_t13_typical.data
+9:39:38 PM -    sram_8192x8_t13_slow.data
+9:39:38 PM -    sram_8192x8_t13.mod
+9:39:38 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh tlf -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux -libname USERLIB
+9:39:44 PM - TLF Model generator succeeded, created:
+9:39:44 PM -    sram_8192x8_t13_fast.tlf
+9:39:44 PM -    sram_8192x8_t13_typical.tlf
+9:39:44 PM -    sram_8192x8_t13_slow.tlf
+9:39:45 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh vclef-fp -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux -inst2ring blockages -site_def off
+9:39:55 PM - VCLEF Footprint generator succeeded, created:
+9:39:55 PM -    sram_8192x8_t13.vclef
+9:39:55 PM - command: /cad/designkit/CBDK013_TSMC_Artisan/orig_lib/aci/ra1sh/bin/ra1sh tmax -instname "sram_8192x8_t13" -words 8192 -bits 8 -frequency 100 -ring_width 4 -mux 32 -drive 6 -write_mask off -wp_size 8 -redundancy off -redundancy_bits 1 -top_layer met5 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -fuse_encoding encoded -insert_fuse yes -fusebox_name FUSE -rtl_style mux
+9:39:55 PM - TetraMax Model generator succeeded, created:
+9:39:55 PM -    sram_8192x8_t13.tv
+9:39:56 PM - Cannot run generator Repair Verilog, as redundancy is not enabled or it is off
+9:39:56 PM - Cannot run generator Repair VHDL, as redundancy is not enabled or it is off
