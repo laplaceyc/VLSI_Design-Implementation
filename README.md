@@ -13,3 +13,5 @@ Redesign Lab01 and parameterize all constants.<br>
 ＊test pattern 04 with default 15 out signal errors!<br>
 # Project01 Local Median Filter Engine
 Design a median filter engine to calculate any 2D grayscale image input, the mask size of the median filter is 7x7.<br>
+# Lab04 APR Practice
+Use the given file to implement block level APR by toturial flow<br>
