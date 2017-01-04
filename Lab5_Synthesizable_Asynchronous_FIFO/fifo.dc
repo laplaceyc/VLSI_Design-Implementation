@@ -1,0 +1,224 @@
+###################################################################
+
+# Created by write_script -format dctcl on Wed Jan  4 10:38:07 2017
+
+###################################################################
+
+# Set the current_design #
+current_design fifo_1
+
+set_units -time ns -resistance kOhm -capacitance pF -power mW -voltage V       \
+-current mA
+remove_wire_load_model
+set_local_link_library {slow.db,fast.db,dpsram256x16_slow_syn.db}
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[0]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[10]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[11]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[12]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[13]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[14]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[15]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[1]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[2]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[3]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[4]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[5]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[6]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[7]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[8]}]
+set_switching_activity -period 1 -toggle_rate 0.01 -static_probability 0.5     \
+[get_pins {sram/QB[9]}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {wptr_full/wptr_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {wptr_full/wptr_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 5.49316e-05 -static_probability  \
+0.999664 [get_pins {wptr_full/wptr_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 7.93457e-05 -static_probability  \
+0.997391 [get_pins {wptr_full/wptr_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000747681 -static_probability  \
+0.966049 [get_pins {wptr_full/wptr_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00259094 -static_probability   \
+0.881348 [get_pins {wptr_full/wptr_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00515442 -static_probability   \
+0.820221 [get_pins {wptr_full/wptr_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00905457 -static_probability   \
+0.793091 [get_pins {wptr_full/wptr_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.0161438 -static_probability    \
+0.785446 [get_pins {wptr_full/wptr_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins wptr_full/fifo_almost_full_w_reg/QN]
+set_switching_activity -period 1 -toggle_rate 0.028009 -static_probability     \
+0.801865 [get_pins {wptr_full/wbin_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000753784 -static_probability  \
+0.967346 [get_pins {wptr_full/wbin_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00281982 -static_probability   \
+0.900848 [get_pins {wptr_full/wbin_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00661926 -static_probability   \
+0.851959 [get_pins {wptr_full/wbin_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.0138794 -static_probability    \
+0.81781 [get_pins {wptr_full/wbin_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins wptr_full/wfull_reg/QN]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {wptr_full/wbin_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 5.49316e-05 -static_probability  \
+0.999664 [get_pins {wptr_full/wbin_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 7.93457e-05 -static_probability  \
+0.997482 [get_pins {wptr_full/wbin_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {wptr_full/wbin_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins wptr_full/temp_reg/QN]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {rptr_empty/rptr_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {rptr_empty/rptr_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {rptr_empty/rptr_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 5.49316e-05 -static_probability  \
+0.999069 [get_pins {rptr_empty/rptr_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000164795 -static_probability  \
+0.993896 [get_pins {rptr_empty/rptr_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000619507 -static_probability  \
+0.975708 [get_pins {rptr_empty/rptr_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00138855 -static_probability   \
+0.946884 [get_pins {rptr_empty/rptr_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00262146 -static_probability   \
+0.924438 [get_pins {rptr_empty/rptr_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00441895 -static_probability   \
+0.916473 [get_pins {rptr_empty/rptr_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 9.76563e-05 -static_probability  \
+0.99939 [get_pins {rptr_empty/raddr_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 9.76563e-05 -static_probability  \
+0.99939 [get_pins {rptr_empty/raddr_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00010376 -static_probability   \
+0.997665 [get_pins {rptr_empty/raddr_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000192261 -static_probability  \
+0.969269 [get_pins {rptr_empty/raddr_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000564575 -static_probability  \
+0.881363 [get_pins {rptr_empty/raddr_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00132751 -static_probability   \
+0.770477 [get_pins {rptr_empty/raddr_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00303955 -static_probability   \
+0.62941 [get_pins {rptr_empty/raddr_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00619812 -static_probability   \
+0.58194 [get_pins {rptr_empty/raddr_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.0056488 -static_probability    \
+0.188812 [get_pins rptr_empty/fifo_almost_empty_r_reg/QN]
+set_switching_activity -period 1 -toggle_rate 0.00528259 -static_probability   \
+0.196381 [get_pins rptr_empty/rempty_reg/QN]
+set_switching_activity -period 1 -toggle_rate 0.00732117 -static_probability   \
+0.928436 [get_pins {rptr_empty/rbin_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000637817 -static_probability  \
+0.979233 [get_pins {rptr_empty/rbin_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00161743 -static_probability   \
+0.955261 [get_pins {rptr_empty/rbin_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00361023 -static_probability   \
+0.936707 [get_pins {rptr_empty/rbin_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {rptr_empty/rbin_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {rptr_empty/rbin_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 5.49316e-05 -static_probability  \
+0.999069 [get_pins {rptr_empty/rbin_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000164795 -static_probability  \
+0.99437 [get_pins {rptr_empty/rbin_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {rptr_empty/rbin_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00528259 -static_probability   \
+0.196381 [get_pins rptr_empty/temp_reg/QN]
+set_switching_activity -period 1 -toggle_rate 0.00827332 -static_probability   \
+0.895691 [get_pins {sync_w2r/rq1_wptr_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00549011 -static_probability   \
+0.905121 [get_pins {sync_w2r/rq1_wptr_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00385742 -static_probability   \
+0.914505 [get_pins {sync_w2r/rq1_wptr_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00224304 -static_probability   \
+0.945007 [get_pins {sync_w2r/rq1_wptr_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000674438 -static_probability  \
+0.982452 [get_pins {sync_w2r/rq1_wptr_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00010376 -static_probability   \
+0.998337 [get_pins {sync_w2r/rq1_wptr_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 5.49316e-05 -static_probability  \
+0.999496 [get_pins {sync_w2r/rq1_wptr_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {sync_w2r/rq1_wptr_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {sync_w2r/rq1_wptr_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00549011 -static_probability   \
+0.905121 [get_pins {sync_w2r/rq2_wptr_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00385742 -static_probability   \
+0.914505 [get_pins {sync_w2r/rq2_wptr_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00224304 -static_probability   \
+0.945007 [get_pins {sync_w2r/rq2_wptr_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000674438 -static_probability  \
+0.982452 [get_pins {sync_w2r/rq2_wptr_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 5.49316e-05 -static_probability  \
+0.999496 [get_pins {sync_w2r/rq2_wptr_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {sync_w2r/rq2_wptr_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999542 [get_pins {sync_w2r/rq2_wptr_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00010376 -static_probability   \
+0.998337 [get_pins {sync_w2r/rq2_wptr_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00827332 -static_probability   \
+0.895691 [get_pins {sync_w2r/rq2_wptr_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00344238 -static_probability   \
+0.949539 [get_pins {sync_r2w/wq1_rptr_reg[0]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00226135 -static_probability   \
+0.957321 [get_pins {sync_r2w/wq1_rptr_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00125122 -static_probability   \
+0.972763 [get_pins {sync_r2w/wq1_rptr_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000537109 -static_probability  \
+0.987823 [get_pins {sync_r2w/wq1_rptr_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000158691 -static_probability  \
+0.997696 [get_pins {sync_r2w/wq1_rptr_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq1_rptr_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq1_rptr_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq1_rptr_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq1_rptr_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00226135 -static_probability   \
+0.957321 [get_pins {sync_r2w/wq2_rptr_reg[1]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00125122 -static_probability   \
+0.972763 [get_pins {sync_r2w/wq2_rptr_reg[2]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000537109 -static_probability  \
+0.987823 [get_pins {sync_r2w/wq2_rptr_reg[3]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.000158691 -static_probability  \
+0.997696 [get_pins {sync_r2w/wq2_rptr_reg[4]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq2_rptr_reg[6]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq2_rptr_reg[8]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq2_rptr_reg[5]/QN}]
+set_switching_activity -period 1 -toggle_rate 4.88281e-05 -static_probability  \
+0.999756 [get_pins {sync_r2w/wq2_rptr_reg[7]/QN}]
+set_switching_activity -period 1 -toggle_rate 0.00344238 -static_probability   \
+0.949539 [get_pins {sync_r2w/wq2_rptr_reg[0]/QN}]
+create_clock [get_ports clk_w]  -name CLK_W  -period 10  -waveform {0 5}
+set_fix_hold [get_clocks CLK_W]
+set_dont_touch_network [get_clocks CLK_W]
+create_clock [get_ports clk_r]  -name CLK_R  -period 14  -waveform {0 7}
+set_dont_touch_network [get_clocks CLK_R]
+set_fix_hold [get_clocks CLK_R]
+1
